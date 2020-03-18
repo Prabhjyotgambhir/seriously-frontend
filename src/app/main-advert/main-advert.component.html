@@ -1,0 +1,13 @@
+<div fxLayout="row">
+    <div fxFlex="70" class="left-section">
+    </div>
+    <div fxFlex="30">
+        <swiper class="swiper-container" [config]="config" fxFlex="auto">
+            <div *ngFor="let slide of slides" class="swiper-slide">
+                <div fxLayout="column" fxLayoutAlign="center center" fxFlexFill>
+                    <img src="{{slide.src}}" alt="" class="full-width full-height">
+                </div>
+            </div>
+        </swiper>
+    </div>
+</div>

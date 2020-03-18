@@ -1,13 +1,3 @@
-.ui-container {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-  
 mat-sidenav {
       width: 300px;
 }
@@ -27,21 +17,3 @@ mat-sidenav {
 mat-nav-list {
     padding: 0;
 }
-
-.search-form-field {
-    height: 100%;
-    margin: auto;
-}
-
-::ng-deep .mat-form-field-infix {
-    border-top: .5em solid transparent !important;
-}
-
-::ng-deep .mat-form-field-underline {
-    background-color: white !important;
-}
-
-::ng-deep .mat-input-container label {
-    color: white !important;
-}
-

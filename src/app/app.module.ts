@@ -43,13 +43,28 @@ import {
   MatTooltipModule,
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MainAdvertComponent } from './main-advert/main-advert.component';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { SwiperModule, SwiperConfigInterface,
+  SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+  observer: true,
+  direction: 'horizontal',
+  threshold: 50,
+  spaceBetween: 5,
+  slidesPerView: 1,
+  centeredSlides: true
+};
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    MainAdvertComponent
   ],
   imports: [
     BrowserModule,
@@ -89,8 +104,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatTooltipModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule.forRoot(routes),
+    FlexLayoutModule,
+    SwiperModule,
+
   ],
-  providers: [],
+  providers: [
+    {
+      provide: SWIPER_CONFIG,
+      useValue: DEFAULT_SWIPER_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 
