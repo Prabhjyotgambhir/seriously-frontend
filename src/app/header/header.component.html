@@ -1,1 +1,41 @@
-<p>header works!</p>
+<div [class.is-mobile]="mobileQuery.matches">
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="snav.toggle()" *ngIf="mobileQuery.matches">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+  
+    <mat-sidenav-container class="sidenav-container">
+      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+        <mat-nav-list>
+          <div class="side-content">
+            <button class="full-width full-height" mat-button [routerLink]="['/']">
+              Home
+            </button>
+          </div>
+          <div class="side-content">
+            <button class="full-width full-height" mat-button [routerLink]="['/myposts']">
+              About Me
+            </button>
+          </div>
+          <div class="side-content">
+            <button class="full-width full-height" mat-button [routerLink]="['/categories']">
+              Categories
+            </button>
+          </div>
+          <div class="side-content">
+            <button class="full-width full-height" mat-button [routerLink]="['/projects']">
+              My Tech Projects
+            </button>
+          </div>
+          <div class="side-content">
+            <button class="full-width full-height" mat-button [routerLink]="['/projects']">
+              My Food Love
+            </button>
+          </div>
+  
+        </mat-nav-list>
+      </mat-sidenav>
+      <router-outlet></router-outlet>
+    </mat-sidenav-container>
+  </div>

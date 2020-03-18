@@ -1,0 +1,47 @@
+.ui-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+  
+mat-sidenav {
+      width: 300px;
+}
+
+.sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+    background: white;
+}
+
+.side-content {
+    height: 75px;
+    border-top: 1px solid #e9e9e9;
+}
+
+mat-nav-list {
+    padding: 0;
+}
+
+.search-form-field {
+    height: 100%;
+    margin: auto;
+}
+
+::ng-deep .mat-form-field-infix {
+    border-top: .5em solid transparent !important;
+}
+
+::ng-deep .mat-form-field-underline {
+    background-color: white !important;
+}
+
+::ng-deep .mat-input-container label {
+    color: white !important;
+}
+
