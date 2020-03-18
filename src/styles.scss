@@ -31,8 +31,8 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 body {
     padding: 0;
     margin: 0;
+    font-family: Roboto;
 }
-
 
 .full-width {
     width: 100%;
@@ -54,6 +54,14 @@ body {
     padding: 0 !important;
 }
 
+.text-sub-heading {
+    color: #909090;
+}
+
 .no-margin {
     margin: 0 !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }

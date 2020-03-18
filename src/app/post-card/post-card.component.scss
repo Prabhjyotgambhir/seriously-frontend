@@ -1,0 +1,36 @@
+img {
+    max-height: 400px;
+    max-width: 600px;
+}
+
+mat-card {
+    margin: 8px 0px;
+}
+
+.title {
+    font-weight: bold;
+    &:hover {
+        color: red;
+    }
+}
+
+mat-icon {
+    height: 1.2em;
+    width: 1.2em;
+    line-height: 1.2;
+    font-size: 1.2em;
+}
+
+.content {
+    font-size: 16px;
+    padding: 16px 0px !important;
+}
+
+mat-card-actions {
+    border-top: 1px solid #e6e6e6;
+    button {
+        &:hover {
+            color: red;
+        }
+    }
+}

@@ -49,6 +49,7 @@ import { routes } from './app.routes';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SwiperModule, SwiperConfigInterface,
   SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { PostCardComponent } from './post-card/post-card.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   observer: true,
@@ -64,7 +65,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    MainAdvertComponent
+    MainAdvertComponent,
+    PostCardComponent
   ],
   imports: [
     BrowserModule,
