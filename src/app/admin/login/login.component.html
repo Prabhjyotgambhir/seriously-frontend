@@ -1,0 +1,16 @@
+  <form [formGroup]="loginFormGroup" (ngSubmit)="login()">
+    <div fxLayout="column" fxLayoutAlign="center center" class="form-container">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email" [(ngModel)]="auth.email" required>
+        <mat-icon matSuffix>email</mat-icon>
+        <mat-error *ngIf="loginFormGroup.controls.email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" type="password" formControlName="password" [(ngModel)]="auth.password" required>
+        <mat-icon matSuffix>vpn_key</mat-icon>
+      </mat-form-field>
+      <button mat-raised-button color="primary">Login</button>
+    </div>
+  </form> 

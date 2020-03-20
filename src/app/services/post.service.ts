@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { appUrl } from '../shared/constant';
 import { Post } from '../data-models/Post';
+import { Category } from '../data-models/category';
 
 @Injectable({
   providedIn: 'root'
@@ -18,5 +19,13 @@ export class PostService {
 
   getPostById(id: number): Observable<Post> {
     return this.httpClient.get<Post>(appUrl + `posts/${id}`);
+  }
+
+  createPost(post: Post): Observable<Post> {
+    return this.httpClient.post<Post>(appUrl + 'posts', post);
+  }
+
+  getCategories(): Observable<Category[]> {
+    return this.httpClient.get<Category[]>(appUrl + 'category');
   }
 }

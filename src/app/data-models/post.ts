@@ -6,4 +6,5 @@ export class Post {
     updatedAt?: Date;
     userId?: number;
     postImage: string;
+    categoryId: number;
 }

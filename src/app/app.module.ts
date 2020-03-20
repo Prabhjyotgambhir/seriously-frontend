@@ -7,41 +7,6 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// Material modules
-import {
-  MatAutocompleteModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatDividerModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatStepperModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-} from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MainAdvertComponent } from './main-advert/main-advert.component';
 import { RouterModule } from '@angular/router';
@@ -52,6 +17,8 @@ import { SwiperModule, SwiperConfigInterface,
 import { PostCardComponent } from './post-card/post-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { AdminModule } from './admin/admin.module';
+import { MaterialModule } from './shared/material/material.module';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   observer: true,
@@ -75,44 +42,14 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatAutocompleteModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MatDividerModule,
-    MatExpansionModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatMenuModule,
-    MatNativeDateModule,
-    MatPaginatorModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatSnackBarModule,
-    MatSortModule,
-    MatStepperModule,
-    MatTableModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatTooltipModule,
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
     FlexLayoutModule,
     SwiperModule,
-    HttpClientModule
+    HttpClientModule,
+    AdminModule,
+    MaterialModule
   ],
   providers: [
     {

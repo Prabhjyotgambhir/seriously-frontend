@@ -3,6 +3,9 @@
       <button mat-icon-button (click)="snav.toggle()" *ngIf="mobileQuery.matches">
         <mat-icon>menu</mat-icon>
       </button>
+      <button mat-icon-button class="logo" [routerLink]="['/home']">
+        <img class="full-width full-height" src="assets/images/logo.png" alt="">
+      </button>
     </mat-toolbar>
   
     <mat-sidenav-container class="sidenav-container">

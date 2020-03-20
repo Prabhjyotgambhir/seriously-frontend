@@ -1,9 +1,16 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { LoginComponent } from './admin/login/login.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { AuthGuard } from './shared/auth.guard';
+import { CreatePostComponent } from './admin/create-post/create-post.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'home', component: HomeComponent},
-    { path: 'post-detail/:id', component: PostDetailComponent}
+    { path: 'post-detail/:id', component: PostDetailComponent},
+    { path: 'admin', component: LoginComponent},
+    { path: 'admin/dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
+    { path: 'admin/dashboard/create-post', component: CreatePostComponent, canActivate: [AuthGuard]}
 ];

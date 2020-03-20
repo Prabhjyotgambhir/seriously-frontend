@@ -1,0 +1,26 @@
+<form [formGroup]="createPostGroup" (ngSubmit)="submit()">
+    <div fxLayout="column" class="form-container" fxFlex="60" fxFlex.sm="100" fxFlex.xs="100"
+        fxLayoutAlign="center center">
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>title</mat-label>
+            <input matInput placeholder="Title" formControlName="title" [(ngModel)]="post.title" required>
+            <mat-error *ngIf="createPostGroup['controls'].title.errors?.required">Title is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Content</mat-label>
+            <textarea matInput formControlName="content" [(ngModel)]="post.content" required></textarea>
+            <mat-error *ngIf="createPostGroup['controls'].content.errors?.required">Content is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Category</mat-label>
+            <mat-select [(ngModel)]="post.categoryId" formControlName="categoryId" required>
+                <mat-option *ngFor="let category of categories" [value]="category.id">
+                    {{category.name}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="createPostGroup['controls'].categoryId.errors?.required">Category is required</mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" class="submit">Submit</button>
+    </div>
+</form>
