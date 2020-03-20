@@ -8,6 +8,9 @@ import { Post } from '../data-models/Post';
 })
 export class PostCardComponent implements OnInit {
   @Input() post: Post;
+  @Input() showReadMore: boolean;
+  @Input() maxHeight: any;
+  @Input() maxWidth: any;
   constructor() { }
 
   ngOnInit() {

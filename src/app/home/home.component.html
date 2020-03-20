@@ -2,7 +2,7 @@
     <app-main-advert></app-main-advert>
     <div>
         <div fxLayout="row wrap" fxFlex="80" fxLayoutGap="10px" fxLayoutAlign="flex-start center">
-            <app-post-card [post]="post" *ngFor="let post of postList" fxFlex="25" fxFlex.md="33" fxFlex.sm="50"
+            <app-post-card [post]="post" [maxHeight]="400" [maxWidth]="600" [showReadMore]="true" *ngFor="let post of postList" fxFlex="25" fxFlex.md="33" fxFlex.sm="50"
                 fxFlex.xs="100">
             </app-post-card>
         </div>

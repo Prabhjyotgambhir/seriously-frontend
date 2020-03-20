@@ -1,31 +1,31 @@
 <mat-card>
-    <img mat-card-image
+    <img [style.maxWidth.px]="maxWidth" [style.maxHeight.px]="maxHeight" mat-card-image
         src="https://i2.wp.com/www.jabra.com/blog/wp-content/uploads/2020/03/tyler-franta-iusJ25iYu1c-unsplash-scaled.jpg?resize=540%2C360&ssl=1"
         alt="Photo of a Shiba Inu">
     <mat-card-content class="no-margin">
         <div fxLayout="column">
-            <h2 class="title no-margin cursor-pointer">POST TITLE 1</h2>
+            <h2 class="title no-margin cursor-pointer">{{post.title}}</h2>
             <div fxLayout="row wrap" fxLayoutALign="flex-start center"  fxLayoutGap="10px" class="text-sub-heading">
                 <div fxLayout="row" fxLayoutAlign="center center">
                     <mat-icon>update</mat-icon>
                     <span>2 days ago</span>
                 </div>
-                <div fxLayout="row" fxLayoutAlign="center center">
+                <!-- <div fxLayout="row" fxLayoutAlign="center center">
                     <mat-icon>comments</mat-icon>
                     <span>0 Comments</span>
-                </div>
+                </div> -->
                 <div fxLayout="row" fxLayoutAlign="center center">
                     <mat-icon>category</mat-icon>
-                    <span>Lifestyle</span>
+                    <span>{{post.category.name}}</span>
                 </div>
             </div>
             <div class="content">
-                Who said a rose can only be used to woo your beloved? Women have been using rose petals since centuries to soothe their 
+                {{post.content}}
             </div>
         </div>
     </mat-card-content>
-    <mat-card-actions >
-        <button mat-button>Read More
+    <mat-card-actions *ngIf="showReadMore">
+        <button mat-button [routerLink]="['/post-detail', post.id]">Read More
             <mat-icon>arrow_right_alt</mat-icon>
         </button>
     </mat-card-actions>
