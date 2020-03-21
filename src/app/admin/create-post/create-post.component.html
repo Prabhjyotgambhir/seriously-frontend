@@ -6,11 +6,13 @@
             <input matInput placeholder="Title" formControlName="title" [(ngModel)]="post.title" required>
             <mat-error *ngIf="createPostGroup['controls'].title.errors?.required">Title is required</mat-error>
         </mat-form-field>
+
         <mat-form-field appearance="outline" class="full-width">
             <mat-label>Content</mat-label>
             <textarea matInput formControlName="content" [(ngModel)]="post.content" required></textarea>
             <mat-error *ngIf="createPostGroup['controls'].content.errors?.required">Content is required</mat-error>
         </mat-form-field>
+
         <mat-form-field appearance="outline" class="full-width">
             <mat-label>Category</mat-label>
             <mat-select [(ngModel)]="post.categoryId" formControlName="categoryId" required>
@@ -21,6 +23,13 @@
             <mat-error *ngIf="createPostGroup['controls'].categoryId.errors?.required">Category is required</mat-error>
         </mat-form-field>
 
+        <div class="image-upload full-width" fxLayoutAlign="center center" fxLayout="column">
+            <button mat-button (click)="uploadButtonClick()" type="button" class="full-width">
+                <input type="file" formControlName="image" (change)="uploadPost($event)" accept="image/*" #filePath style="display: none">
+                Upload Image
+            </button>
+            <mat-error *ngIf="createPostGroup['controls'].image.errors?.required && submitted">Image is required</mat-error>
+        </div>
         <button mat-raised-button color="primary" class="submit">Submit</button>
     </div>
 </form>

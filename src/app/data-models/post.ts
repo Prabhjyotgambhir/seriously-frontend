@@ -5,6 +5,7 @@ export class Post {
     createdAt?: Date;
     updatedAt?: Date;
     userId?: number;
-    postImage: string;
+    image: any;
+    imagePath?: string;
     categoryId: number;
 }
