@@ -9,11 +9,12 @@ import { RequestInterceptor } from '../shared/request.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGuard } from '../shared/auth.guard';
 import { CreatePostComponent } from './create-post/create-post.component';
+import { CreateBannerComponent } from './create-banner/create-banner.component';
 
 
 
 @NgModule({
-  declarations: [LoginComponent, DashboardComponent, CreatePostComponent],
+  declarations: [LoginComponent, DashboardComponent, CreatePostComponent, CreateBannerComponent],
   imports: [
     CommonModule,
     FormsModule,

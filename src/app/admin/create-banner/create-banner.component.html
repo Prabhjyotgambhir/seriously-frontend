@@ -1,0 +1,30 @@
+<form [formGroup]="createBannerGroup" (ngSubmit)="submit()">
+    <div fxLayout="column" class="form-container" fxFlex="60" fxFlex.sm="100" fxFlex.xs="100"
+        fxLayoutAlign="center center">
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>title</mat-label>
+            <input matInput placeholder="Title" formControlName="title" [(ngModel)]="banner.title" required>
+            <mat-error *ngIf="createBannerGroup['controls'].title.errors?.required">Title is required</mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Category</mat-label>
+            <mat-select [(ngModel)]="banner.categoryId" formControlName="categoryId" required>
+                <mat-option *ngFor="let category of categories" [value]="category.id">
+                    {{category.name}}
+                </mat-option>
+            </mat-select>
+            <mat-error *ngIf="createBannerGroup['controls'].categoryId.errors?.required">Category is required</mat-error>
+        </mat-form-field>
+
+        <div class="image-upload full-width" fxLayoutAlign="center center" fxLayout="column">
+            <button mat-button (click)="uploadButtonClick()" type="button" class="full-width">
+                <input type="file" formControlName="image" (change)="uploadPost($event)" accept="image/*" #filePath style="display: none">
+                Upload Image
+            </button>
+            <mat-error *ngIf="createBannerGroup['controls'].image.errors?.required && submitted">Image is required</mat-error>
+        </div>
+        <button mat-raised-button color="primary" class="submit">Submit</button>
+    </div>
+</form>

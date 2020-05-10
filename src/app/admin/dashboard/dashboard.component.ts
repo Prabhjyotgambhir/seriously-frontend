@@ -17,4 +17,8 @@ export class DashboardComponent implements OnInit {
     this.router.navigateByUrl('admin/dashboard/create-post');
   }
 
+  public createBanner() {
+    this.router.navigateByUrl('admin/dashboard/create-banner');
+  }
+
 }
