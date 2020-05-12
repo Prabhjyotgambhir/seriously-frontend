@@ -76,7 +76,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MaterialModule,
     AngularFontAwesomeModule,
     NgxMasonryModule,
-    // GoogleChartsModule.forRoot('AIzaSyDJuN7kiikxWhBxhnQcXW84yCJ_UgU-sbU')
   ],
   providers: [
     {
