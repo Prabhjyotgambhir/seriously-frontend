@@ -30,6 +30,15 @@
             </button>
             <mat-error *ngIf="createPostGroup['controls'].image.errors?.required && submitted">Image is required</mat-error>
         </div>
+
+        <div class="full-width" fxLayout="row" fxLayoutGap="20px">
+            <label>Popular</label>
+            <mat-radio-group aria-label="Select an option" [(ngModel)]="post.popular" formControlName="popular">
+                <mat-radio-button [value]="true">Yes</mat-radio-button>
+                <mat-radio-button [value]="false">No</mat-radio-button>
+            </mat-radio-group>
+        </div>
+          
         <button mat-raised-button color="primary" class="submit">Submit</button>
     </div>
 </form>

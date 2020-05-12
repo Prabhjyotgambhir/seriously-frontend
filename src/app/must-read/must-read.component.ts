@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../data-models/Post';
+import { PostService } from '../services/post.service';
 
 @Component({
   selector: 'app-must-read',
@@ -7,35 +8,13 @@ import { Post } from '../data-models/Post';
   styleUrls: ['./must-read.component.scss']
 })
 export class MustReadComponent implements OnInit {
-  mustRead = [];
-  constructor() { }
+  mustRead: Post[] = [] ;
+  constructor(private postService: PostService) { }
 
   ngOnInit() {
-    this.mustRead = [{
-      imagePath: 'https://solopine.com/rosemary/wp-content/uploads/2018/11/',
-      image: 'p1-520x400.jpg',
-      title: 'Exploring the Combodia',
-      createdAt: 'Novermber 20, 2000',
-      category: {
-        name: 'Lifestyle'
-      }
-    }, {
-      imagePath: 'https://solopine.com/rosemary/wp-content/uploads/2018/11/',
-      image: 'p1-520x400.jpg',
-      title: 'Exploring the Combodia',
-      createdAt: 'Novermber 20, 2000',
-      category: {
-        name: 'Lifestyle'
-      }
-    }, {
-      imagePath: 'https://solopine.com/rosemary/wp-content/uploads/2018/11/',
-      image: 'p1-520x400.jpg',
-      title: 'Exploring the Combodia',
-      createdAt: 'Novermber 20, 2000',
-      category: {
-        name: 'Lifestyle'
-      }
-    }];
+    this.postService.getPopularPost(4, 0).subscribe((response) => {
+      this.mustRead = response;
+    });
   }
 
 }

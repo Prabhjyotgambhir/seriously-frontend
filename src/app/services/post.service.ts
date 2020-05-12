@@ -44,6 +44,10 @@ export class PostService {
     return this.httpClient.get<any>(appUrl + 'posts/covid');
   }
 
+  getPopularPost(limit: number, page: number): Observable<Post[]> {
+    return this.httpClient.get<Post[]>(appUrl + `posts/popular?limit=${limit}&page=${page}`);
+  }
+
 
   // Banner code
 

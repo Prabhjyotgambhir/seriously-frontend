@@ -24,7 +24,8 @@ export class CreatePostComponent implements OnInit {
       title: new FormControl(this.post.title, [Validators.required, Validators.minLength(10)]),
       content: new FormControl(this.post.content, [Validators.required, Validators.minLength(10)]),
       categoryId: new FormControl(this.post.categoryId, Validators.required),
-      image: new FormControl(this.post.image, Validators.required)
+      image: new FormControl(this.post.image, Validators.required),
+      popular: new FormControl(this.post.popular, Validators.required)
     });
     this.getCategories();
   }

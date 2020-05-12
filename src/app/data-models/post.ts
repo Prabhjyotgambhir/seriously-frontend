@@ -8,4 +8,5 @@ export class Post {
     image: any;
     imagePath?: string;
     categoryId: number;
+    popular: boolean;
 }
