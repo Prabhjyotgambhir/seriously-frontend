@@ -19,6 +19,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { AdminModule } from './admin/admin.module';
 import { MaterialModule } from './shared/material/material.module';
+import { MidSectionComponent } from './mid-section/mid-section.component';
+import { MainContentComponent } from './main-content/main-content.component';
+import { TodayContentComponent } from './today-content/today-content.component';
+import { ShortAboutMeComponent } from './short-about-me/short-about-me.component';
+import { MustReadComponent } from './must-read/must-read.component';
+import { ExploreMoreComponent } from './explore-more/explore-more.component';
+import { CategorySectionComponent } from './category-section/category-section.component';
+import { InstagramSectionComponent } from './instagram-section/instagram-section.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { NgxMasonryModule } from 'ngx-masonry';
+import { CoronaComponent } from './corona/corona.component';
+import { FooterComponent } from './footer/footer.component';
+import { DatePipe } from '@angular/common';
+// import { GoogleChartsModule } from 'angular-google-charts';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   observer: true,
@@ -36,7 +50,17 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     HeaderComponent,
     MainAdvertComponent,
     PostCardComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    MidSectionComponent,
+    MainContentComponent,
+    TodayContentComponent,
+    ShortAboutMeComponent,
+    MustReadComponent,
+    ExploreMoreComponent,
+    CategorySectionComponent,
+    InstagramSectionComponent,
+    CoronaComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -49,13 +73,17 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SwiperModule,
     HttpClientModule,
     AdminModule,
-    MaterialModule
+    MaterialModule,
+    AngularFontAwesomeModule,
+    NgxMasonryModule,
+    // GoogleChartsModule.forRoot('AIzaSyDJuN7kiikxWhBxhnQcXW84yCJ_UgU-sbU')
   ],
   providers: [
     {
       provide: SWIPER_CONFIG,
       useValue: DEFAULT_SWIPER_CONFIG
-    }
+    },
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })

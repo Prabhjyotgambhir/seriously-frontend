@@ -1,0 +1,24 @@
+<section class="row">
+    <div fxLayoutAlign="center center" fxLayout="column">
+        <div class="text-header" fxLayoutAlign="center center" fxLayout="column">
+            <span class="text-accent">{{post.category.name}}</span>
+            <h1>{{post.title}}</h1>
+            <time class="text-primary">{{post.createdAt | date: 'mediumDate'}}</time>
+        </div>
+        <img src="{{post.imagePath}}/{{post.image}}" alt="" class="full-width">
+        <p>{{post.content}}</p>
+        <button mat-button class="continue-button" [routerLink]="['/post-detail', post.id]">CONTINUE READING</button>
+        <div class="share-section">
+            <span>Share</span>
+            <button mat-icon-button>
+                <fa name="fab fa-facebook-f"></fa>
+            </button>
+            <button mat-icon-button>
+                <fa name="fab fa-instagram"></fa>
+            </button>
+            <button mat-icon-button>
+                <fa name="fab fa-linkedin"></fa>
+            </button>
+        </div>
+    </div>
+</section>

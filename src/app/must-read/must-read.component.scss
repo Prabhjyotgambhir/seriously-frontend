@@ -1,0 +1,31 @@
+section {
+    padding: 32px;
+    .must-read-header {
+        border: 1px solid #c69f73;
+        padding: 16px 32px;
+        width: 250px;
+    }
+    
+    .must-read-container {
+        height: 80px;
+        width: 100%;
+        margin: 16px 0px;
+
+        span, time {
+            margin-left: 12px;
+        }
+    }
+    time {
+        font-size: 12px;
+        font-style: italic;;
+    }
+
+    .title {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .text-accent {
+        font-size: 12px;
+    }
+}

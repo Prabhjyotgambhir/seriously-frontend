@@ -1,0 +1,27 @@
+.about-header {
+    border: 1px solid #c69f73;
+    padding: 16px 32px;
+    width: 250px;
+}
+
+section {
+    padding: 32px;
+}
+
+.about-container {
+    padding: 32px;
+    img {
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;;
+        padding: 16px 0px;
+    }
+}
+
+button {
+    fa {
+       &:hover {
+            color: #c69f73;
+        } 
+    }
+}

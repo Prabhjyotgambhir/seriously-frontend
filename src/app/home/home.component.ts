@@ -15,11 +15,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.getPostsList();
+    this.getPostsList(4, 1);
   }
 
-  public getPostsList(): void {
-    this.postService.getPosts().subscribe((response) => {
+  public getPostsList(limit: number, page: number): void {
+    this.postService.getPosts(4, 1).subscribe((response) => {
       this.postList = response;
     });
   }

@@ -1,13 +1,8 @@
-<div fxLayout="column">
-    <app-main-advert></app-main-advert>
-    <div>
-        <div fxLayout="row wrap" fxFlex="80" fxLayoutGap="10px" fxLayoutAlign="flex-start center">
-            <app-post-card [post]="post" [maxHeight]="400" [maxWidth]="600" [showReadMore]="true" *ngFor="let post of postList" fxFlex="25" fxFlex.md="33" fxFlex.sm="50"
-                fxFlex.xs="100">
-            </app-post-card>
-        </div>
-        <div fxFlex="20">
-
-        </div>
+<div fxLayout="column" class="container">
+    <div class="header-name" fxLayoutAlign="center center">
+        <span class="text-primary">PRABHJYOT GAMBHIR</span>
     </div>
+    <app-main-advert></app-main-advert>
+    <!-- <app-mid-section></app-mid-section> -->
+    <app-main-content></app-main-content>
 </div>

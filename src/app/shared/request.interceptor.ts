@@ -69,7 +69,7 @@ export class RequestInterceptor implements HttpInterceptor {
                         break;
                     case 403:
                         this.handleUnAuthorized(response);
-                        break;y
+                        break;
                     case 500:
                         this.handleServerError();
                         break;

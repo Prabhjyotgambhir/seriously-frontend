@@ -1,3 +1,7 @@
+.main-section {
+    height: 600px;
+}
+
 .left-section {
     background: url('../../assets/images/main-advert.jpg');
     height: 400px;
@@ -7,5 +11,15 @@
 }
 
 .swiper-container {
-    height: 400px;
+    height: 600px;
+}
+
+::ng-deep .swiper-button-prev, ::ng-deep  .swiper-button-next {
+    width: 25px !important;
+    height: 25px !important;
+    font-size: 25px !important;
+    border: 2px solid white !important;
+    border-radius: 50% !important;
+    background-color: white !important;
+    background-size: 25px 25px !important;
 }

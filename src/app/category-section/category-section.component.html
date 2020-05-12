@@ -1,0 +1,10 @@
+<section>
+    <div class="column" fxLayoutGap="20px">
+        <div class="category-header" fxLayoutAlign="center center">
+            <span>Must Read</span>
+        </div>
+        <div *ngFor="let category of categories" class="category-container">
+            <button mat-button class="full-width">{{category.name}}</button>
+        </div>
+    </div>
+</section>

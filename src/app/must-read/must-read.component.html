@@ -1,0 +1,15 @@
+<section fxLayout="column" fxLayoutAlign="center center">
+    <div class="must-read-header" fxLayoutAlign="center center">
+        <span>Must Read</span>
+    </div>
+    <div *ngFor="let post of mustRead">
+        <div fxLayout="row" class="must-read-container">
+            <img fxFlex="40" src="{{post.imagePath}}/{{post.image}}" alt="">
+            <div fxLayout="column" fxFlex="60" fxLayoutAlign="center">
+                <span class="title">{{post.title}}</span>
+                <span class="text-accent">{{post.category.name}}</span>
+                <time>{{post.createdAt}}</time>
+            </div>
+        </div>
+    </div>
+</section>

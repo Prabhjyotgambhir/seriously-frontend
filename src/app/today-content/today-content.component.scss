@@ -1,0 +1,30 @@
+
+.text-header {
+    margin: 32px 0px;
+    h1  {
+        font-size: 32px;
+        margin: 12px 0px;
+    }
+    
+    time {
+        font-size: 12px;
+        font-style: italic;;
+    }
+}
+
+.continue-button {
+    border: 1px solid #c69f73;
+    border-radius: 0 !important;
+}
+
+.share-section {
+    color: #c69f73;
+    span {
+        font-style: italic;
+        font-size: 12px;
+    }
+    border-bottom: 1px solid #c69f73;
+    padding: 2px;
+    text-align: right;
+    width: 100%;
+}

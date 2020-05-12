@@ -1,0 +1,17 @@
+<section fxLayout="row" fxLayout.sm="column">
+    <div fxFlex="70" fxFlex.sm="100" fxFlex.xs="100" fxLayout="column" fxLayoutGap="50px">
+        <app-today-content *ngIf="postList.length > 0"></app-today-content>
+
+        <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="20px" fxLayoutAlign="space-between flex-start">
+            <app-post-card fxFlex="45" fxFlex.xs="100" fxFlex.sm="50" *ngFor="let post of postList" [post]="post" [height]="300"
+                [showReadMore]="true">
+            </app-post-card>
+        </div>
+        <button mat-button class="continue-button">CONTINUE READING</button>
+    </div>
+    <div fxFlex="30" fxFlex.sm="100" fxLayout.xs="column" fxFlex.xs="100" fxLayout.sm="row">
+        <app-short-about-me fxFlexOrder.sm="2" fxFlex.sm="50" fxFlex.xs="100"></app-short-about-me>
+        <app-must-read fxFlexOrder.sm="1" fxFlex.sm="50" fxFlex.xs="100"></app-must-read>
+        <!-- <app-category-section></app-category-section> -->
+    </div>
+</section>
