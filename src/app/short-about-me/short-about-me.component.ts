@@ -12,4 +12,24 @@ export class ShortAboutMeComponent implements OnInit {
   ngOnInit() {
   }
 
+  facebookPage() {
+    window.open('https://www.facebook.com/prabhjotgambhir/');
+  }
+
+  instagramPage() {
+    window.open('https://www.instagram.com/prabhjyot_gambhir/');
+  }
+
+  linkedinPage() {
+    window.open('https://www.linkedin.com/in/prabhjyot-gambhir-3832b5116/');
+  }
+
+  githubPage() {
+    window.open('https://github.com/Prabhjyotgambhir');
+  }
+
+  emailPage() {
+    window.location.href = 'mailto:knowprabhjyot@gmail.com?subject=Subject&body=message%20goes%20here';
+  }
+
 }

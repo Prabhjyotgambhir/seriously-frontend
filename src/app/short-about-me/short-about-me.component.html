@@ -4,28 +4,25 @@
     </div>
     <div class="about-container" fxLayoutAlign="center center" fxLayout="column">
         <img src="../../assets//images//myimage.jpg" alt="">
-        <span class="text-center">
+        <span class="text-center description-ellipses">
             Hey Everybody, My name is Prabhjyot Gambhir. A guy who loves code and loves learning latest technologies.
             Life have been good to me so far, teaching me about relationships, personal growth and self improvisation. 
         </span>
         <button mat-button class="text-accent">Read More</button>
         <div>
-            <button mat-icon-button>
+            <button mat-icon-button (click)="facebookPage()">
                 <fa name="fab fa-facebook-f"></fa>
             </button>
-            <button mat-icon-button>
+            <button mat-icon-button (click)="instagramPage()">
                 <fa name="fab fa-instagram"></fa>
             </button>
-            <button mat-icon-button>
+            <button mat-icon-button (click)="linkedinPage()">
                 <fa name="fab fa-linkedin"></fa>
             </button>
-            <button mat-icon-button>
+            <button mat-icon-button (click)="githubPage()">
                 <fa name="fab fa-github"></fa>
             </button>
-            <button mat-icon-button>
-                <fa name="fab fa-angellist"></fa>
-            </button>
-            <button mat-icon-button>
+            <button mat-icon-button (click)="emailPage()">
                 <fa name="envelope"></fa>
             </button>
         </div>
