@@ -4,16 +4,16 @@ import { Post } from '../data-models/Post';
 import { DatePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-main-content',
-  templateUrl: './main-content.component.html',
-  styleUrls: ['./main-content.component.scss']
+  selector: 'app-post-list',
+  templateUrl: './post-list.component.html',
+  styleUrls: ['./post-list.component.scss']
 })
-export class MainContentComponent implements OnInit {
+export class PostListComponent implements OnInit {
   public postList: Post[] = [];
   constructor(private postService: PostService, private datepipe: DatePipe) { }
 
   ngOnInit() {
-    this.getPostsList(4, 0);
+    this.getPostsList(10, 0);
   }
 
   public getPostsList(limit: number, page?: number): void {

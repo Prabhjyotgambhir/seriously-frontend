@@ -7,14 +7,16 @@ import { AuthGuard } from './shared/auth.guard';
 import { CreatePostComponent } from './admin/create-post/create-post.component';
 import { CoronaComponent } from './corona/corona.component';
 import { CreateBannerComponent } from './admin/create-banner/create-banner.component';
+import { PostListComponent } from './post-list/post-list.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'home', component: HomeComponent},
     { path: 'corona', component: CoronaComponent},
     { path: 'post-detail/:id', component: PostDetailComponent},
+    { path: 'post-list', component: PostListComponent},
     { path: 'admin', component: LoginComponent},
     { path: 'admin/dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
     { path: 'admin/dashboard/create-post', component: CreatePostComponent, canActivate: [AuthGuard]},
-    { path: 'admin/dashboard/create-banner', component: CreateBannerComponent, canActivate: [AuthGuard]}
+    { path: 'admin/dashboard/create-banner', component: CreateBannerComponent, canActivate: [AuthGuard]},
 ];

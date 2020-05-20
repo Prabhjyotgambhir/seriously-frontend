@@ -1,22 +1,21 @@
 <mat-card>
     <img [style.maxWidth.px]="maxWidth" [style.maxHeight.px]="maxHeight"  [style.height.px]="height" mat-card-image
-        src="{{post.imagePath}}/{{post.image}}"
-        alt="Photo of a Shiba Inu">
+        src="{{post.imagePath}}/{{post.image}}">
     <mat-card-content class="no-margin">
         <div fxLayout="column">
             <div fxLayout="row" class="text-accent category-name" fxLayoutAlign="center center">
                 <mat-icon>category</mat-icon>
                 <span>{{post.category.name}}</span>
             </div>
-            <h2 class="title no-margin cursor-pointer">{{post.title}}</h2>
-            <div class="content text-ellipses">
+            <h2 class="title no-margin cursor-pointer text-ellipses">{{post.title}}</h2>
+            <div class="content description-ellipses">
                 {{post.content}}
             </div>
         </div>
     </mat-card-content>
     <mat-card-actions *ngIf="showReadMore" fxLayoutAlign="space-between center">
         <time class="text-primary">{{post.createdAt | date: 'mediumDate'}}</time>
-        <button mat-button [routerLink]="['/post-detail', post.id]">Read More
+        <button mat-button [routerLink]="['/post-detail', post?.id]">Read More
             <mat-icon>arrow_right_alt</mat-icon>
         </button>
     </mat-card-actions>

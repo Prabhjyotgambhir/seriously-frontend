@@ -1,13 +1,15 @@
 <section fxLayout="row" fxLayout.sm="column">
     <div fxFlex="70" fxFlex.sm="100" fxFlex.xs="100" fxLayout="column" fxLayoutGap="50px">
-        <app-today-content *ngIf="postList.length > 0"></app-today-content>
+        <app-today-content *ngIf="this.postService.todaysPost"></app-today-content>
 
-        <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="20px" fxLayoutAlign="space-between flex-start">
-            <app-post-card fxFlex="45" fxFlex.xs="100" fxFlex.sm="50" *ngFor="let post of postList" [post]="post" [height]="300"
+        <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-evenly flex-start">
+            <app-post-card fxFlex="45" fxFlex.xs="100" fxFlex.sm="50" *ngFor="let post of postList" [post]="post" [height]="250"
                 [showReadMore]="true">
             </app-post-card>
         </div>
-        <button mat-button class="continue-button">CONTINUE READING</button>
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <button fxFlex="50" mat-button class="continue-button" [routerLink]="['/post-list']">Read More Posts</button>
+        </div>
     </div>
     <div fxFlex="30" fxFlex.sm="100" fxLayout.xs="column" fxFlex.xs="100" fxLayout.sm="row">
         <app-short-about-me fxFlexOrder.sm="2" fxFlex.sm="50" fxFlex.xs="100"></app-short-about-me>

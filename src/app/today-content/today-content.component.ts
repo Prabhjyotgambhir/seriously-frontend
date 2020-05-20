@@ -13,6 +13,7 @@ export class TodayContentComponent implements OnInit {
 
   ngOnInit() {
     this.post = this.postService.todayPost;
+    console.log(this.post, 'post value');
   }
 
 }
