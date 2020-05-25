@@ -19,13 +19,14 @@ export class MainContentComponent implements OnInit {
   public getPostsList(limit: number, page?: number): void {
     this.postService.getPosts(limit, page).subscribe((response) => {
       this.postList = response;
-      this.postList.find((post) => {
-        const todaysDate = this.datepipe.transform(new Date(), 'MM/dd/yyyy');
-        const postDate = this.datepipe.transform(new Date(post.createdAt), 'MM/dd/yyyy');
-        if (todaysDate === postDate) {
-          this.postService.todaysPost = post;
-        }
-      });
+      this.postService.todaysPost = this.postList[0];
+      // this.postList.find((post) => {
+      //   // const todaysDate = this.datepipe.transform(new Date(), 'MM/dd/yyyy');
+      //   // const postDate = this.datepipe.transform(new Date(post.createdAt), 'MM/dd/yyyy');
+      //   // if (todaysDate === postDate) {
+      //   //   this.postService.todaysPost = post;
+      //   // }
+      // });
     });
   }
 

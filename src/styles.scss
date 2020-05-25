@@ -85,6 +85,13 @@ body {
     text-overflow: ellipsis;
 }
 
+.description-ellipses {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
 @media only screen and (max-width: 1170px) and (min-width: 942px) {
 .container {
     width: 940px;

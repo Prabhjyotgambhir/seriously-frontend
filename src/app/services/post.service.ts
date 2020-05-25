@@ -6,6 +6,7 @@ import { appUrl } from '../shared/constant';
 import { Post } from '../data-models/Post';
 import { Category } from '../data-models/category';
 import { Banner } from '../data-models/banner';
+import { Enquiry } from '../data-models/enquiry';
 
 @Injectable({
   providedIn: 'root'
@@ -57,6 +58,12 @@ export class PostService {
 
   getBanner(limit: number, page: number): Observable<Banner[]> {
     return this.httpClient.get<Post[]>(`${appUrl}banner?limit=${limit}&page=${page}`);
+  }
+
+  // Query Code
+
+  createEnquiry(enquiry: Enquiry): Observable<Enquiry> {
+    return this.httpClient.post<Enquiry>(appUrl + 'posts/enquiry', enquiry);
   }
 
 }

@@ -2,7 +2,7 @@
     <div class="must-read-header" fxLayoutAlign="center center">
         <span>Must Read</span>
     </div>
-    <div *ngFor="let post of mustRead">
+    <div *ngFor="let post of mustRead" [routerLink]="['/post-detail', post?.id]" class="cursor-pointer">
         <div fxLayout="row" class="must-read-container">
             <img fxFlex="40" src="{{post.imagePath}}/{{post.image}}" alt="">
             <div fxLayout="column" fxFlex="60" fxLayoutAlign="center">

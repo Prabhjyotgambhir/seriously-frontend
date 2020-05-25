@@ -1,0 +1,72 @@
+<section fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="80px" class="container">
+    <h2>ABOUT ME</h2>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <div fxFlex="60">
+            <span>Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack
+                nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil, flexitarian
+                Truffaut synth art party deep v chillwave. Seitan High Life reprehenderit consectetur cupidatat kogi. Et
+                leggings fanny pack, elit bespoke vinyl art party Pitchfork selfies master cleanse Kickstarter seitan
+                retro. Drinking vinegar stumptown yr pop-up artisan sunt. Deep v cliche lomo.
+
+                Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan
+                exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum. Aliquip veniam
+                delectus, Marfa eiusmod Pinterest. Et leggings fanny pack, elit bespoke vinyl art.
+
+                Disrupt vero ea id fugiat, lo-fi lomo post-ironic irony kitsch Banksy. Tumblr kale chips single-origin
+                coffee Wes Anderson +1 tousled, disrupt butcher sapiente banh mi brunch nisi irony. Artisan wolf fap
+                lomo, laborum Tumblr anim consequat fashion axe sartorial leggings viral.
+
+                Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan
+                exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum. Aliquip veniam
+                delectus, Marfa eiusmod Pinterest. Et leggings fanny pack, elit bespoke vinyl art
+
+                Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache fanny pack
+                nostrud. Photo booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica. Salvia esse nihil, flexitarian
+                Truffaut synth art party deep v chillwave. Seitan High Life reprehenderit consectetur cupidatat kogi. Et
+                leggings fanny pack, elit bespoke vinyl art.</span>
+        </div>
+        <div fxFlex="40">
+            <img class="my-image full-height full-width" src="../../assets/images/myimage.jpg" alt="">
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutGap="30px">
+        <img fxFlex="33" src="../../assets/images/myimage1.jpg" alt="">
+        <img fxFlex="33" src="../../assets/images/myimage1.jpg" alt="">
+        <img fxFlex="33" src="../../assets/images/myimage1.jpg" alt="">
+    </div>
+    <h2>CONTACT ME</h2>
+    <form [formGroup]="createEnquiryForm" (ngSubmit)="submit()" class="full-width">
+        <div fxLayout="column" class="form-container" fxFlex="100" fxFlex.sm="100" fxFlex.xs="100"
+            fxLayoutAlign="center center">
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>title</mat-label>
+                <input matInput placeholder="Title" formControlName="title" [(ngModel)]="enquiry.title" required>
+                <mat-error *ngIf="createEnquiryForm['controls'].title.errors?.required">Title is required</mat-error>
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Query</mat-label>
+                <textarea matInput formControlName="query" [(ngModel)]="enquiry.query" required></textarea>
+                <mat-error *ngIf="createEnquiryForm['controls'].query.errors?.required">Query is required</mat-error>
+            </mat-form-field>    
+
+                
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email" formControlName="email" [(ngModel)]="enquiry.email" required>
+                <mat-icon matSuffix>email</mat-icon>
+                <mat-error *ngIf="createEnquiryForm.controls.email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Contact</mat-label>
+                <input matInput placeholder="Contact Number" type="number" formControlName="contact" [(ngModel)]="enquiry.contact" required>
+                <mat-icon matSuffix>phone</mat-icon>
+                <mat-hint>Include area code</mat-hint>
+                <mat-error *ngIf="createEnquiryForm['controls'].contact.errors?.required">Contact is required</mat-error>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" class="submit">Submit</button>
+        </div>
+    </form>
+</section>

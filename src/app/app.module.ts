@@ -33,6 +33,7 @@ import { CoronaComponent } from './corona/corona.component';
 import { FooterComponent } from './footer/footer.component';
 import { DatePipe } from '@angular/common';
 import { PostListComponent } from './post-list/post-list.component';
+import { AboutmeComponent } from './aboutme/aboutme.component';
 // import { GoogleChartsModule } from 'angular-google-charts';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
@@ -62,7 +63,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     InstagramSectionComponent,
     CoronaComponent,
     FooterComponent,
-    PostListComponent
+    PostListComponent,
+    AboutmeComponent
   ],
   imports: [
     BrowserModule,
