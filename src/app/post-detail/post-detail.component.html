@@ -1,5 +1,6 @@
-<div fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" *ngIf="post" fxFlex="80" class="container">
+<div fxLayout="column" fxLayout.sm="column" fxLayout.xs="column" *ngIf="post" fxFlex="80" class="container">
     <div>
         <app-post-card [post]="post"></app-post-card>
     </div>
+    <disqus class="full-width full-height" [identifier]="pageId"></disqus>
 </div>

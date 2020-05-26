@@ -35,6 +35,7 @@ import { DatePipe } from '@angular/common';
 import { PostListComponent } from './post-list/post-list.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 // import { GoogleChartsModule } from 'angular-google-charts';
+import { DisqusModule } from 'ngx-disqus';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   observer: true,
@@ -80,6 +81,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MaterialModule,
     AngularFontAwesomeModule,
     NgxMasonryModule,
+    DisqusModule.forRoot('http-localhost-4200-a8xho3bvxl')
+
   ],
   providers: [
     {

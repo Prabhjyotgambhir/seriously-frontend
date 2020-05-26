@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PostDetailComponent implements OnInit {
   public post: Post;
+  public pageId = '/post-detail';
   constructor(private postService: PostService, private route: ActivatedRoute) { }
 
   ngOnInit() {
